@@ -1,0 +1,54 @@
+---
+---
+
+<dialog class="modal bg-modal" id="about-modal">
+  <div class="flex flex-center flex-column padding-100 gap-100">
+    <h3 class="fs-label fw-semi-bold">Digital Sketch</h3>
+    <p>
+      Etch A Sketch is a drawing toy that was invented by Andre Cassagnes of
+      France. Created in the 1960s, the drawing toy is one of the best known
+      toys of the era. This is in no way associated with the toy or brand. This
+      is Digital Sketch!
+    </p>
+    <p>
+      To find out more information about the toy and its history
+      <a
+        href="https://en.wikipedia.org/wiki/Etch_A_Sketch"
+        class="modal-link"
+        target="_blank">click here</a
+      >.
+    </p>
+    <p>
+      This application was created as a project following
+      <abbr title="The Odin Project">TOP</abbr>.
+    </p>
+    <button class="button fs-label fw-semi-bold" id="close-about">Close</button>
+  </div>
+</dialog>
+
+<style>
+  /* modals */
+  .modal {
+    color: var(--iro-shiroi);
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 5px;
+  }
+  .modal::backdrop {
+    background: var(--iro-backdrop);
+    opacity: 0.5;
+  }
+  .modal-link {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+    transition: all 750ms ease-in-out;
+  }
+  .modal-link:hover {
+    text-decoration: underline;
+    color: black;
+  }
+</style>

@@ -1,0 +1,48 @@
+---
+import "../css/global.css";
+import Navigation from "../components/Navigation.astro";
+import Modal from "../components/Modal.astro";
+import Footer from "../components/Footer.astro";
+
+const { pageTitle } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@200;300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Navigation />
+    <main class="bg-gradient flex flex-center gap-100">
+      <slot />
+    </main>
+    <Footer />
+    <Modal />
+  </body>
+</html>
+
+<script>
+  // Modal Document Event Listeners
+  const aboutButton = document.getElementById("about-button");
+  const aboutModal = document.getElementById("about-modal");
+  const closeAbout = document.getElementById("close-about");
+
+  aboutButton.addEventListener("click", () => {
+    aboutModal.showModal();
+  });
+  closeAbout.addEventListener("click", () => {
+    aboutModal.close();
+  });
+</script>
