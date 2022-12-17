@@ -1,18 +1,8 @@
 ---
-const pageTitle = "Cookbook"
+import MainLayout from "../layouts/MainLayout.astro";
+const pageTitle = "Cookbook";
 ---
-<!DOCTYPE html>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout pageTitle={pageTitle}>
+  <p>I work!</p>
+</MainLayout>
